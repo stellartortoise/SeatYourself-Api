@@ -1,0 +1,16 @@
+{
+  "name": "seatyourself-api",
+  "version": "1.0.0",
+  "description": "My API for the Seat Yourself App",
+  "license": "ISC",
+  "author": "Alex Barr",
+  "type": "module",
+  "main": "app.js",
+  "scripts": {
+    "start": "nodemon app.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "dependencies": {
+    "express": "^5.1.0"
+  }
+}
