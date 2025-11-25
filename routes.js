@@ -75,7 +75,7 @@ router.get('/:id', async (req,res) => {
     if (result.recordset.length === 0) {
         res.status(404).send('Occasion not found');
     } else {
-        res.json(result.recordset);
+        res.json(result.recordset[0]);
     }    
 });
 
