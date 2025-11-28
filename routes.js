@@ -11,7 +11,7 @@ router.get('/', async (req, res) => {
 
     await sql.connect(dbConnectionString);
 
-    const result = await sql.query`SELECT a.OccasionId, a.Title, a.Description, a.Filename, a.CreatedAt, b.CategoryId, b.Name 
+    const result = await sql.query`SELECT a.OccasionId, a.Title, a.Description, a.Date, a.Time, a.Owner, a.Filename, a.CreatedAt, b.CategoryId, b.Name 
         from [dbo].[Occasion] a 
         INNER JOIN [dbo].[Category] b 
         ON a.CategoryId = b.CategoryId 
@@ -120,7 +120,7 @@ router.get('/:id', async (req,res) => {
     const id = req.params.id;
 
     await sql.connect(dbConnectionString);
-    const result = await sql.query`SELECT a.OccasionId, a.Title, a.Description, a.Filename, a.CreatedAt, b.CategoryId, b.Name 
+    const result = await sql.query`SELECT a.OccasionId, a.Title, a.Description, a.Date, a.Time, a.Owner a.Filename, a.CreatedAt, b.CategoryId, b.Name 
         from [dbo].[Occasion] a 
         INNER JOIN [dbo].[Category] b 
         ON a.CategoryId = b.CategoryId 
